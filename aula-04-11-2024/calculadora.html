@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<style>
+    .btn {
+        background-color: aqua;
+        padding: 7px 12px;
+        width: 120px;
+        border-radius: 15px;
+        margin-bottom: 50px;
+    }
+    
+    .btn:hover {
+        cursor: pointer;
+        background-color: rgba(0, 255, 255, 0.358);
+    }
+</style>
+
+<body>
+    <div class="visor">
+        <input type="text" disabled id="visor">
+    </div>
+    <div>
+        <span class="btn" id="numero-1" onclick="clickNumero(1)">1</span>
+        <span class="btn" id="numero-2" onclick="clickNumero(2)">2</span>
+        <span class="btn" id="numero-3" onclick="clickNumero(3)">3</span>
+    </div>
+    <br>
+    <!-- operacoes -->
+    <div class="operacoes">
+         <span class="btn" id="operador1" onclick="clickOperacao('+')">+</span>
+         <span class="btn" id="operador2" onclick="clickOperacao('-')">-</span>
+         <span class="btn" id="numero-5" onclick="clickOperacao('=')">=</span>
+    </div>     
+    <div class="resultado"></div>
+</body>
+
+<script>
+    function clickNumero(numero){
+        alert('numero clicado: ' + numero);
+        document.querySelector("#visor").value = numero;
+    }
+    
+    function clickOperacao(operacao){
+        alert('operacao clicado:' + operacao);
+    }
+</script>
+
+</html>
